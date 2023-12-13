@@ -149,8 +149,8 @@
 				<version>3.10.1</version> <!-- Đảm bảo bạn sử dụng phiên bản này
 				hoặc phiên bản tương thích -->
 				<configuration>
-					<source>17</source>
-					<target>17</target>
+					<source>20</source>
+					<target>20</target>
 				</configuration>
 			</plugin>
 		</plugins>
