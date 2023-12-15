@@ -116,9 +116,14 @@
 			<version>0.15.0</version>
 		</dependency>
 		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
+		</dependency>
+		<dependency>
 			<groupId>com.google.cloud.sql</groupId>
-			<artifactId>cloud-sql-connector-jdbc-sqlserver</artifactId>
-			<version>1.15.1</version>
+			<artifactId>mysql-socket-factory</artifactId>
+			<version>1.0.4</version>
 		</dependency>
 
 
