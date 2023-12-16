@@ -161,13 +161,10 @@
 				<artifactId>appengine-maven-plugin</artifactId>
 				<version>2.4.4</version>
 				<configuration>
-					<deploy.projectId>milkteacloud-408213</deploy.projectId>
-        			<deploy.version>1</deploy.version>
-        			<!-- Cấu hình đường dẫn tới tệp app.yaml -->
-        			<deploy.yamlPath>src/main/appengine/app.yaml</deploy.yamlPath>
+					<version>1</version>
+					<projectId>GCLOUD_CONFIG</projectId>
 				</configuration>
 			</plugin>
-			
 		</plugins>
 	</build>
 
