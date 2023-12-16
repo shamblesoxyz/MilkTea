@@ -132,10 +132,7 @@
 							<c:forEach var="milkTea" items="${listMilkTea}">
 								<li class="cart-item payment-item">
 									<div class="cart-item-container">
-										<c:url
-											value="/home/image/${milkTea.image != null ? milkTea.image : null }"
-											var="imgUrl" />
-										<img src="${imgUrl}" class="cart-product-image payment-product-image" />
+										<img src="${milkTea.image}" class="cart-product-image payment-product-image" />
 										<div class="cart-item-info">
 											<div class="d-flex align-items-center"
 												style="margin-bottom: 6px">

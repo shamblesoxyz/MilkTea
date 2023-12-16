@@ -38,10 +38,7 @@
 						<div class="col-3">
 							<a href="/product_detail/${milkTea.idMilkTea}" class="card">
 								<div class="img-container">
-									<c:url
-										value="/home/image/${milkTea.image != null ? milkTea.image : null }"
-										var="imgUrl" />
-									<img src="${imgUrl}" class="card-image card-img-top" />
+									<img src="${milkTea.image}" class="card-image card-img-top" />
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">${milkTea.name}</h5>
@@ -88,10 +85,7 @@
 						<div class="col-3">
 							<a href="/product_detail/${milkTea.idMilkTea}" class="card">
 								<div class="img-container">
-									<c:url
-										value="/home/image/${milkTea.image != null ? milkTea.image : null }"
-										var="imgUrl" />
-									<img src="${imgUrl}" class="card-image card-img-top" />
+									<img src="${milkTea.image}" class="card-image card-img-top" />
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">${milkTea.name}</h5>
@@ -138,10 +132,7 @@
 						<div class="col-3">
 							<a href="/product_detail/${milkTea.idMilkTea}" class="card">
 								<div class="img-container">
-									<c:url
-										value="/home/image/${milkTea.image != null ? milkTea.image : null }"
-										var="imgUrl" />
-									<img src="${imgUrl}" class="card-image card-img-top" />
+									<img src="${milkTea.image}" class="card-image card-img-top" />
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">${milkTea.name}</h5>

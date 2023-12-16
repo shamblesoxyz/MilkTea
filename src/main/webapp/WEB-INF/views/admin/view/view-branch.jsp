@@ -83,10 +83,8 @@ svg {
 										<td>${branch.name}</td>
 										<td>${branch.addressDetail}</td>
 										<td>${branch.opentime}</td>
-										<td><c:url
-												value="/admin/branch/image/${branch.image != null ? branch.image : 'uploads/abc.jpg' }"
-												var="imgUrl" /> <img width="50px" height="50px"
-											src="${imgUrl }" /></td>
+										<td> <img width="50px" height="50px"
+											src="${branch.image }" /></td>
 										<td>${branch.idCity}</td>
 										<td>${branch.description}</td>
 										<td><a class="btn btn-success"

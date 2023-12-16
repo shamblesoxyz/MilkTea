@@ -84,35 +84,10 @@
 								value="${milkTea.milkTeaTypeByMilkTea.idType}"
 								required="required">
 						</div>
-
-						<!-- Image -->
-						<script type="text/javascript">
-							function chooseFile(fileInput) {
-								if (fileInput.files && fileInput.files[0]) {
-									var reader = new FileReader();
-									reader.onload = function(e) {
-										document.querySelector("#image")
-												.setAttribute('src',
-														e.target.result);
-										document.querySelector("#image").classList
-												.remove("hidden");
-									}
-									reader.readAsDataURL(fileInput.files[0]);
-								}
-							}
-						</script>
 						<div class="mb-3" style="display: flex; flex-direction: column;">
 							<label for="exampleInputImage" class="form-label">Hình
 								ảnh*</label>
-							<c:url
-								value="/admin/branch/image/${milkTea.image != null ? milkTea.image : null }"
-								var="imgUrl" />
-							<input type="hidden" name="image" value="${milkTea.image}">
-							<img class="${milkTea.image == null ? 'hidden':''}" id="image"
-								width="200px" height="200px" src="${imgUrl}" /> <input
-								onchange="chooseFile(this)" placeholder="Image" name="imageFile"
-								type="file" class="form-control-file"
-								aria-describedby="imageFile">
+							<input type="text" name="image" value="${milkTea.image}">
 						</div>
 						<div class="text-end">
 							<button type="submit" class="btn btn-success">

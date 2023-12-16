@@ -8,11 +8,8 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
 import hcmute.config.CustomSiteMeshFilter;
-import hcmute.config.StorageProperties;
-import hcmute.service.IStorageService;
 
 @SpringBootApplication
-@EnableConfigurationProperties(StorageProperties.class)
 public class ProjectApplication {
 
 	public static void main(String[] args) {
@@ -25,11 +22,4 @@ public class ProjectApplication {
 		filterRegistrationBean.addUrlPatterns("/*");
 		return filterRegistrationBean;
 	}
-	@Bean 
-	CommandLineRunner init(IStorageService storageService) {
-		return (args -> {
-			storageService.init();
-		});
-	}
-	
 }

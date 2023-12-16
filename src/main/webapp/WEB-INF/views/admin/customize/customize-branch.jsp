@@ -68,34 +68,10 @@
 								aria-describedby="openTimeHelp" value="${branch.opentime}"
 								required="required">
 						</div>
-
-						<!-- Image -->
-						<script type="text/javascript">
-							function chooseFile(fileInput) {
-								if (fileInput.files && fileInput.files[0]) {
-									var reader = new FileReader();
-									reader.onload = function(e) {
-										document.querySelector("#image").setAttribute(
-												'src', e.target.result);
-										document.querySelector("#image").classList.remove("hidden");
-									}
-									reader.readAsDataURL(fileInput.files[0]);
-								}
-							}
-						</script>
-						
-
 						<div class="mb-3" style="display: flex; flex-direction: column;">
 							<label for="exampleInputImage" class="form-label">Hình
 								ảnh*</label>
-							<c:url
-								value="/admin/branch/image/${branch.image != null ? branch.image : null }"
-								var="imgUrl" />
-							<input type="hidden" name="image" value="${branch.image}">
-							<img class="${branch.image == null ? 'hidden':''}" id="image" width="200px" height="200px" src="${imgUrl}" />
-							<input onchange="chooseFile(this)" placeholder="Image"
-								name="imageFile" type="file" class="form-control-file"
-								id="imageFile" aria-describedby="imageFile">
+							<input type="text" name="image" value="${branch.image}">
 						</div>
 						<div class="mb-3">
 							<label for="exampleInputDescription" class="form-label">ID

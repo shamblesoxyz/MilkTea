@@ -11,10 +11,7 @@
 		<div class="container p-4" style="margin-top: 80px">
 			<div class="row">
 				<section class="col col-6">
-					<c:url
-						value="/branches/image/${branch.image != null ? branch.image : null }"
-						var="imgUrl" />
-					<img src="${imgUrl}" class="store_image" />
+					<img src="${branch.image}" class="store_image" />
 				</section>
 				<section class="col col-6">
 					<div class="branches_info_body">

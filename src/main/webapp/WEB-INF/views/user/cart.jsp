@@ -43,10 +43,7 @@
 							<input value="${milktea.idMilkTea }" type="checkbox"
 								class="checkbox-element" /> <label class="cbx"></label>
 						</div>
-						<c:url
-							value="/cart/image/${milktea.image != null ? milktea.image : null }"
-							var="imgUrl" />
-						<img src="${imgUrl}" class="cart-product-image" />
+						<img src="${milktea.image}" class="cart-product-image" />
 						<div class="cart-item-info">
 							<p class="cart-product-name">${milktea.getName() }</p>
 							<span data-name="${milktea.getSize() }" class="cart-size">${milktea.getSize() }</span>

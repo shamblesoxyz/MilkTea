@@ -30,11 +30,8 @@
 										<div class="col col-6 branch-item">
 											<div class="branch">
 												<div class="branch_image-container">
-													<c:url
-														value="/branches/image/${branch.image != null ? branch.image : null }"
-														var="imgUrl" />
 													<img
-														src="${imgUrl}"
+														src="${branch.image}"
 														class="branch-image" />
 													<div class="branch-slide"></div>
 												</div>

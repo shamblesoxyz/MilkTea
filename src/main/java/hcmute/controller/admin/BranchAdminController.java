@@ -14,7 +14,6 @@ import org.springframework.http.HttpHeaders;
 import hcmute.entity.BranchEntity;
 import hcmute.model.BranchModel;
 import hcmute.service.IBranchService;
-import hcmute.service.IStorageService;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -27,9 +26,6 @@ public class BranchAdminController {
 
 	@Autowired
 	private IBranchService branchService;
-
-	@Autowired
-	private IStorageService storageService;
 
 	@GetMapping("")
 	public String indexViewBranch(ModelMap model) {
@@ -72,12 +68,6 @@ public class BranchAdminController {
 			if (branch.getIdCity() != null) {
 				entity.setIdCity(branch.getIdCity());
 			}
-			if (branch.getImageFile() !=null && !branch.getImageFile().isEmpty()) {
-				UUID uuid = UUID.randomUUID();
-				String uuString = uuid.toString();
-				entity.setImage(storageService.getStorageFilename(branch.getImageFile(), uuString));
-				storageService.store(branch.getImageFile(), entity.getImage());
-			}
 			branchService.save(entity);
 			String message = branch.getIsEdit() ? "Branch đã được cập nhật thành công"
 					: "Branch đã được thêm thành công";
@@ -87,14 +77,6 @@ public class BranchAdminController {
 		}
 
 		return new ModelAndView("redirect:/admin/branch", model);
-	}
-
-	@GetMapping("/image/{filename:.+}")
-	public ResponseEntity<Resource> serverFile(@PathVariable String filename) {
-		Resource file = storageService.loadAsResource(filename);
-		return ResponseEntity.ok()
-				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=\"" + file.getFilename() + "\"")
-				.body(file);
 	}
 
 	@GetMapping("edit/{idBranch}")

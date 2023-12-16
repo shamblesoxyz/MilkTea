@@ -90,10 +90,8 @@ svg {
 										<td>${milkTea.cost}</td>
 										<td>${milkTea.description}</td>
 										<td>${milkTea.milkTeaTypeByMilkTea.name}</td>
-										<td><c:url
-												value="/admin/milk-tea/image/${milkTea.image != null ? milkTea.image : 'uploads/abc.jpg' }"
-												var="imgUrl" /> <img width="50px" height="50px"
-											src="${imgUrl }" /></td>
+										<td><img width="50px" height="50px"
+											src="${milkTea.image }" /></td>
 										<td><a class="btn btn-success"
 											href="/admin/milk-tea/edit/${milkTea.idMilkTea}">edit</a></td>
 									</tr>

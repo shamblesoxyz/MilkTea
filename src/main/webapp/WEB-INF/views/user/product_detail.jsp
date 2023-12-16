@@ -108,9 +108,8 @@
 			<div class="col-12 col-lg-6">
 				<div class="card mb-3 no-border">
 					<div class="card-body" style="padding: 0;">
-						<a href="" data-toggle="modal" data-target="#productModal"> <c:url
-								value="/home/image/${milkTea.image != null ? milkTea.image : null }"
-								var="imgUrl" /> <img src="${imgUrl}" class="img-fluid"
+						<a href="" data-toggle="modal" data-target="#productModal"> <img
+							src="${milkTea.image}" class="img-fluid"
 							style="border-radius: 10px;" />
 						</a>
 					</div>
@@ -181,9 +180,7 @@
 				<c:forEach var="milkTea" items="${relevantProducts }">
 					<div class="col-lg-3 col-sm-12 mt-2">
 						<a href="/product_detail/${milkTea.idMilkTea }" class="card">
-							<c:url
-								value="/home/image/${milkTea.image != null ? milkTea.image : null }"
-								var="imgUrl" /> <img src="${imgUrl}" class="card-img-top" />
+							<img src="${milkTea.image}" class="card-img-top" />
 							<div class="card-body">
 								<p class="card-title bold-text">${milkTea.name }
 								<p class="black-text"></p>
